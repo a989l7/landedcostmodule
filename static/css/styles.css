@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #C8102E; /* Default red background for Linde */
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-image: url('{{ url_for('static', filename='brand_assets/' ~ brand ~ '/header.jpg') }}');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #C8102E; /* Default red */
+}
+
+.messages {
+    margin-top: 20px;
+}
+
+.message.success {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message.error {
+    background-color: #FF5733;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #C8102E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #A50F24;
+    transform: scale(1.05);
+}
+
+/* Himoinsa-specific styles */
+body[data-brand="Himoinsa"] {
+    background-color: black; /* Black background for Himoinsa */
+    color: white;
+}
+
+body[data-brand="Himoinsa"] .btn {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css ">
+</head>
+<body>
+    <div class="container">
+        <h1>Processed Data</h1>
+        <p>Detected Brand: {{ detected_brand }}</p>
+        <p>Average Factor: {{ avg_factor }}</p>
+        <p>Max Factor: {{ max_factor }}</p>
+        <div>{{ table_html|safe }}</div>
+        <a href="/download?processed_data={{ processed_data }}" class="btn btn-primary">Download Results</a>
+    </div>
+</body>
+</html>

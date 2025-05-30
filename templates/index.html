@@ -1,0 +1,30 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landed Cost Uploader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Landed Cost Module</h1>
+        <p><strong>Did you know?</strong> {{ fun_fact }}</p>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file">Upload Excel File:</label><br>
+            <input type="file" name="file" id="file" accept=".xlsx,.xlsm" required><br><br>
+
+            <label for="gpm_mode">Select GPM Mode:</label><br>
+            <select name="gpm_mode" id="gpm_mode">
+                <option value="avg GPM">Average</option>
+                <option value="min GPM">Minimum</option>
+                <option value="max GPM">Maximum</option>
+            </select><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
